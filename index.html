@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inana Fund Raising </title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="main-content">
+        <!-- navbar -->
+        <nav class="navbar">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="images/Logo.png" alt="Logo">
+            </div>
+
+            <!-- NAV LINKS -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="">Home</a></li>
+                <li><a href="#">My Story</a></li>
+                <li><a href="#">Become A Distributor</a></li>
+                <li><a href="#">Order Now</a></li>
+                <li><a href="#">Our Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <!-- RIGHT SIDE -->
+            <div class="nav-right">
+
+
+                <!-- HAMBURGER -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <svg viewBox="0 0 24 24">
+                        <path stroke-width="2" stroke-linecap="round" d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </div>
+
+            </div>
+
+        </nav>
+        <!-- end of navbar -->
+
+
+
+
+
+        <section class="order-section">
+
+            <!-- HEADLINE -->
+            <div class="headline" data-aos="fade-down" data-aos-delay="200">
+                <img id="headlineSlider" src="images/Everyone gateway text.png" alt="Headline Image"
+                    class="headline-image">
+            </div>
+
+            <!-- BUY BUTTON -->
+            <a href="#" class="buy-btn" data-aos="zoom-in" data-aos-delay="400">Buy Inana</a>
+
+            <!-- LOCATION SELECT -->
+            <div class="location-box" data-aos="fade-up" data-aos-delay="600">
+                <select>
+                    <option selected>Select Location</option>
+                    <option>Abia</option>
+                    <option>Adamawa</option>
+                    <option>Akwa Ibom</option>
+                    <option>Anambra</option>
+                    <option>Bauchi</option>
+                    <option>Bayelsa</option>
+                    <option>Benue</option>
+                    <option>Borno</option>
+                    <option>Cross River</option>
+                    <option>Delta</option>
+                    <option>Ebonyi</option>
+                    <option>Edo</option>
+                    <option>Ekiti</option>
+                    <option>Enugu</option>
+                    <option>FCT - Abuja</option>
+                    <option>Gombe</option>
+                    <option>Imo</option>
+                    <option>Jigawa</option>
+                    <option>Kaduna</option>
+                    <option>Kano</option>
+                    <option>Katsina</option>
+                    <option>Kebbi</option>
+                    <option>Kogi</option>
+                    <option>Kwara</option>
+                    <option>Lagos</option>
+                    <option>Nasarawa</option>
+                    <option>Niger</option>
+                    <option>Ogun</option>
+                    <option>Ondo</option>
+                    <option>Osun</option>
+                    <option>Oyo</option>
+                    <option>Plateau</option>
+                    <option>Rivers</option>
+                    <option>Sokoto</option>
+                    <option>Taraba</option>
+                    <option>Yobe</option>
+                    <option>Zamfara</option>
+                </select>
+            </div>
+
+            <!-- ORDER BUTTON -->
+            <!-- VIDEO BUTTONS -->
+
+            <!-- First Image Button -->
+            <a href="#" class="videobutton btn-one" data-aos="fade-right" data-aos-delay="800"></a>
+
+            <!-- Second Image Button (under the first) -->
+            <a href="#" class="videobutton btn-two" data-aos="fade-right" data-aos-delay="900"></a>
+
+
+        </section>
+    </div>
+
+
+
+    <script src="style.js"></script>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks").classList.toggle("active");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // animation duration in ms
+            once: true,     // whether animation should happen only once - while scrolling down
+        });
+    </script>
+
+
+</body>
+
+</html>
