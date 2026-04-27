@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+
+    position: relative;
+}
+
+/* LOGO */
+.logo img {
+    height: 45px;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+/* ACTIVE LINK */
+.nav-links li a.active {
+    color: #e21c06;
+    font-weight: 600;
+}
+
+/* HOVER EFFECT (UNDERLINE ANIMATION) */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #e21c06;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.nav-links li a:hover {
+    color: #e21c06;
+}
+
+/* RIGHT SIDE */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    /* bring navbar above everything */
+}
+
+
+
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger svg {
+    width: 26px;
+    height: 26px;
+}
+
+.hamburger svg {
+    width: 26px;
+    height: 26px;
+    stroke: #333;
+    /* THIS FIXES IT */
+    stroke-width: 2;
+}
+
+
+
+/* Optional hover effect */
+.hamburger svg:hover {
+    stroke: #e21c06;
+}
+
+/* ================= MOBILE ================= */
+
+/* MOBILE SIDEBAR WITH LEFT-ALIGNED TEXT */
+@media(max-width:900px) {
+
+    .nav-links {
+        position: fixed;
+        /* stay fixed */
+        top: 70px;
+        /* just below navbar */
+        right: -260px;
+        /* hidden initially */
+        height: auto;
+        /* adjust to content height */
+        min-height: 200px;
+        /* optional minimum height */
+        width: 250px;
+        /* sidebar width */
+        background: url('images/Box.png') no-repeat center center;
+        background-size: cover;
+        border-radius: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+        /* LEFT align items */
+        justify-content: flex-start;
+        padding: 20px 20px;
+        /* padding on left and right */
+        gap: 20px;
+        display: flex;
+        transition: right 0.4s ease-in-out;
+        z-index: 1050;
+    }
+
+    /* Slide in when active */
+    .nav-links.active {
+        right: 10px;
+    }
+
+    /* Links styling */
+    .nav-links li a {
+        color: #000;
+        font-weight: 600;
+        font-size: 16px;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+        width: 100%;
+        /* take full sidebar width */
+        text-align: left;
+        /* align text to left */
+        padding-left: 10px;
+        /* optional small padding */
+    }
+
+    .nav-links li a.active {
+        color: #ff4500;
+    }
+
+    .nav-links li a::after {
+        background: #ff4500;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: block;
+        position: relative;
+        z-index: 1100;
+    }
+}
+
+
+
+/* EXTRA SMALL DEVICES */
+@media(max-width:500px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+}
+
+/* end navbar */
+
+
+
+
+
+/* brevages images  */
+.headline-image{
+width:100%;
+max-width:300px;
+display:block;
+margin:0 auto 20px;
+}
+/* end  */
+
+
+
+
+
+
+
+
+.order-section{
+text-align:center;
+font-family:Arial, sans-serif;
+padding:40px 20px;
+}
+
+/* HEADLINE */
+
+.headline h1{
+font-size:40px;
+font-weight:700;
+margin-bottom:10px;
+}
+
+.headline h2{
+font-size:38px;
+font-weight:700;
+}
+
+.logo-box img{
+width:80px;
+vertical-align:middle;
+margin:0 10px;
+}
+
+.inana{
+position:relative;
+}
+
+/* BUY BUTTON */
+
+.buy-btn {
+  display: inline-block;
+  background: url('images/Buyinana.png') no-repeat center center; /* your button image */
+  background-size: cover; /* image fills the button area */
+  padding: 30px 120px; /* keeps original button size */
+  border-radius: 40px; /* rounded corners like before */
+  text-decoration: none; /* remove underline */
+  margin: 30px 0;
+  transition: 0.3s;
+  text-align: center;
+  color: transparent; /* hide text */
+  font-size: 0; /* hide any text content */
+  overflow: hidden; /* ensures rounded corners clip the image */
+}
+
+/* Hide any inner span if present */
+.buy-btn span {
+  display: none;
+}
+
+/* Hover effect */
+.buy-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  filter: brightness(0.9); /* slightly darken image on hover */
+}
+
+/* LOCATION */
+
+.location-box select{
+padding:14px 30px;
+border-radius:30px;
+border:2px solid #ccc;
+font-size:16px;
+margin-bottom:25px;
+}
+
+
+
+
+
+
+
+/* Video BUTTON */
+.videobutton {
+  display: block;
+  width: 260px;
+  height: 80px;
+  margin: 15px auto; /* ✅ centers on all screens */
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+/* First image */
+.btn-one {
+  background: url('images/videoicon1.png') no-repeat center center;
+  background-size: contain; /* keeps image centered inside */
+}
+
+/* Second image */
+.btn-two {
+  background: url('images/videoicon2.png') no-repeat center center;
+  background-size: contain;
+}
+
+/* Hover effect */
+.videobutton:hover {
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*  Mobile */
+@media (max-width: 768px) {
+  .videobutton {
+    width: 90%;       /* ✅ responsive instead of fixed 400px */
+    max-width: 280px; /* prevents it from getting too big */
+    height: 70px;
+  }
+}
+
+/*  Large screens */
+@media (min-width: 1200px) {
+  .videobutton {
+    width: 300px;
+    height: 90px;
+  }
+}
